@@ -20,6 +20,7 @@ Copyright (C) 2025 Fabian Greffrath
 
 #include "SDL_mixer.h"
 
+#include <limits.h>
 #include <adlmidi.h>
 
 #include "music.h"

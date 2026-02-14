@@ -31,4 +31,8 @@ fixed FixedScale(fixed orig, fixed factor, fixed divisor);
 fixed FixedMulShift(fixed a, fixed b, fixed shift);
 fixed FixedSqrt(fixed n);
 
+#define Fixed2Float(n) _Generic(typeof((n)),  ufixed: (float)((n) * (1.0f / (1 << 16))), \
+                                               fixed: (float)((n) * (1.0f / (1 << 16))))
+#define Float2Fixed(n) _Generic(typeof((n)),   float: (fixed)((n) * (1 << 16)), \
+                                              double: (fixed)((n) * (1 << 16)))
 #endif

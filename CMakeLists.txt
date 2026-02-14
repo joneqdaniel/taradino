@@ -69,7 +69,7 @@ if(libADLMIDI_FOUND)
 			add_library(libADLMIDI::ADLMIDI ALIAS libADLMIDI::ADLMIDI_static)
 		endif()
 	endif()
-	target_link_libraries(taradino PRIVATE libADLMIDI::ADLMIDI)
+	target_link_libraries(taradino PRIVATE libADLMIDI::ADLMIDI -lstdc++)
 endif()
 
 include(CheckIncludeFile)
