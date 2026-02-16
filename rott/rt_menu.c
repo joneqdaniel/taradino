@@ -4757,7 +4757,10 @@ void CP_ExtOptionsMenu(void)
 		{
 			case 0:
 				usemouselook ^= 1;
-				SetNormalHorizon(PLAYER[0]);
+				if (PLAYER[0])
+				{
+					SetNormalHorizon(PLAYER[0]);
+				}
 				DrawExtOptionsButtons();
 				break;
 			case 1:
