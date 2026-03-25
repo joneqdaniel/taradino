@@ -18,6 +18,8 @@ Copyright (C) 2025 Fabian Greffrath
 
 #if defined(HAVE_ADLMIDI)
 
+#include <limits.h>
+
 #include "SDL_mixer.h"
 
 #include <limits.h>
